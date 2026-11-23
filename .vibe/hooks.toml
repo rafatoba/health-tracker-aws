@@ -1,0 +1,9 @@
+# Runs the build and tests at the end of each turn of the main agent, if code changed.
+# Same script as the Claude Code Stop hook in .claude/settings.json.
+[[hooks]]
+name = "verify"
+type = "post_agent"
+match = "main"
+command = "bash scripts/verify.sh vibe"
+timeout = 600.0
+description = "Run ./mvnw verify when src/ or build files changed"

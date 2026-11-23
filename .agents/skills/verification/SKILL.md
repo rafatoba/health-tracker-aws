@@ -9,6 +9,8 @@ Run these steps and report the real results. If a step could not run, say so and
 
 1. **Build and tests:** `./mvnw verify` (in PowerShell: `.\mvnw.cmd verify`). Check the exit code and the
    test summary (`Tests run: X, Failures: 0, Errors: 0, Skipped: 0`). Any skipped test must be explained.
+   A hook also runs it at the end of each turn when code changed (`scripts/verify.sh`), but run it
+   yourself to see the full summary before reporting.
 2. **New behavior is tested:** every new or changed endpoint has a test (`@WebMvcTest` + `MockMvc`, like
    `ping/PingControllerTest`). If not, write it before going on.
 3. **Run the app** when an endpoint, configuration or dependency changed: start it with

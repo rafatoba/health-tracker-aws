@@ -33,3 +33,7 @@ It is at a very early stage: a Spring Boot skeleton with only a `GET /ping` endp
 - Skills live in `.agents/skills/<name>/SKILL.md` (read by Mistral Vibe). Claude Code only reads
   `.claude/skills/`, so each skill there is a short stub pointing to the `.agents/` one.
 - Before saying a change is done, follow the `verification` skill.
+- Hooks run `scripts/verify.sh` at the end of each agent turn: the `Stop` hook in `.claude/settings.json`
+  (Claude Code) and the `post_agent` hook in `.vibe/hooks.toml` (Mistral Vibe). If there are uncommitted
+  changes to `src/`, `pom.xml` or the Maven wrapper, it runs `./mvnw verify` and, if it fails, sends the
+  end of the log back to the agent. Keep both hook files pointing to the same script.
