@@ -1,4 +1,4 @@
-package dev.rafatoba.health_tracker_aws.controller;
+package dev.rafatoba.health_tracker_aws.ping;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
