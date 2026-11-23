@@ -4,7 +4,8 @@ A version of the Health Tracker backend meant to run on AWS, instead of the curr
 (`../health-tracker`: Firestore + Cloud Run). See `../CLAUDE.md` for the overall project.
 
 It is at a very early stage: a Spring Boot skeleton with only a `GET /ping` endpoint
-(`ping/PingController`). There is no persistence, security, CI or deployment yet.
+(`ping/PingController`). There is no persistence, security or deployment yet. CI
+(`.github/workflows/ci.yml`) runs `./mvnw -B verify` on every pull request.
 
 ## Stack
 

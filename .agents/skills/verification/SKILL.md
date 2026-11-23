@@ -17,4 +17,4 @@ Run these steps and report the real results. If a step could not run, say so and
 4. **Review the diff:** `git status` and `git diff`. Only intended files changed; nothing from `target/`,
    `.idea/` or local config is staged; package declarations match their folders.
 5. **Report:** what ran, the outcome (with the failing output if something failed) and what was not
-   verified. The repo has no CI yet, so local verification is the only check before merging.
+   verified. CI also runs `./mvnw -B verify` on the PR: check it passes (`gh pr checks`).
