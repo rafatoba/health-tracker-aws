@@ -1,4 +1,4 @@
-package dev.rafatoba.health_tracker_aws.controller;
+package dev.rafatoba.health_tracker_aws.ping;
 
 import java.util.Map;
 
